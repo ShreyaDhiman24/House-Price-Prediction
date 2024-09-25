@@ -208,3 +208,47 @@ mean_cv_score = np.mean(cv_scores)
 
 ### Q4: What happens if there are multicollinearity issues among features?
 - **A4**: Multicollinearity can affect the stability of the coefficient estimates. It can be assessed using Variance Inflation Factor (VIF) and can be addressed by removing or combining correlated features.
+
+## Technologies In Depth
+
+### 1. **NumPy**
+- **Use**: NumPy is a fundamental library for numerical computations in Python. It provides support for arrays, matrices, and many mathematical functions.
+- **Application in Project**:
+  - Efficiently handles numerical data and performs mathematical operations.
+  - Supports data manipulation and analysis through its powerful array structures.
+
+### 2. **Pandas**
+- **Use**: Pandas is a data manipulation and analysis library that provides data structures like DataFrames, which are essential for handling structured data.
+- **Application in Project**:
+  - **Data Loading**: Read data from various formats (CSV, Excel, SQL databases).
+  - **Data Cleaning**: Handle missing values, duplicates, and perform data transformations.
+  - **Feature Engineering**: Easily create new features and manipulate existing ones (e.g., calculating `price_per_sqft`).
+  - **Data Exploration**: Conduct exploratory data analysis (EDA) to understand data distributions and relationships.
+
+### 3. **Scikit-learn (sklearn)**
+- **Use**: Scikit-learn is a powerful machine learning library that provides tools for building and evaluating models, including regression, classification, clustering, and more.
+- **Application in Project**:
+  - **Model Building**: Implement the linear regression model for predicting house prices.
+  - **Data Preprocessing**: Utilize functions for splitting datasets, scaling features, and encoding categorical variables (e.g., one-hot encoding).
+  - **Model Evaluation**: Assess model performance using metrics like R-squared and cross-validation techniques.
+
+### 4. **Pickle**
+- **Use**: Pickle is a Python module for serializing and deserializing Python objects, allowing you to save the state of an object to a file and later retrieve it.
+- **Application in Project**:
+  - **Model Persistence**: Save the trained machine learning model to a file so it can be loaded later without retraining.
+  - **Deployment**: Facilitate the use of the model in production environments by loading it into the Flask server for making predictions.
+
+### 5. **Python Flask**
+- **Use**: Flask is a micro web framework for Python that allows you to build web applications quickly and easily.
+- **Application in Project**:
+  - **Web Server**: Set up a Flask server to handle HTTP requests from the front end.
+  - **API Creation**: Create endpoints that accept input data (e.g., square footage, number of bedrooms) and return predictions from the trained model.
+  - **Integration**: Connect the web interface (HTML/CSS/JavaScript) with the backend logic (model predictions) seamlessly.
+
+### Summary
+- **NumPy**: For numerical operations and array handling.
+- **Pandas**: For data manipulation, cleaning, and exploration.
+- **Scikit-learn**: For building, evaluating, and using machine learning models.
+- **Pickle**: For saving and loading trained models.
+- **Flask**: For creating a web server to serve predictions and interact with users.
+
